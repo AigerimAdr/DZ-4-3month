@@ -13,6 +13,11 @@
         "name": "Maya",
         "age": 25,
         "nationality": "Kazahstan"
+    },
+    {
+        "name": "Mia",
+        "age": 25,
+        "nationality": "Kazahstan"
     }
 ]
 

@@ -1,45 +1,53 @@
-// Home Work-1
+// Home Work -4.1
 
-// const btn = document.querySelector('.btn')
-// const nameElements = document.querySelectorAll('.name')
-// const ageElements = document.querySelectorAll('.age')
-// const nationalityElements = document.querySelectorAll('.nationality')
+// const btn = document.querySelector(".btn");
+// const cardBox = document.querySelector(".card__box");
 
-// btn.onclick = () => {
-//     const request = new XMLHttpRequest()  
-//     request.open("GET", "people.json")  
-//     request.setRequestHeader("Content-type", "application/json")
-//     request.send()
 
+// btn.onclick = async () => {
+//     try {
+//         const response = await fetch('people.json');
+//         const peoples = await response.json();
     
-//     request.onload = () => { 
-//         const data = JSON.parse(request.response)
-//         nameElements[0].innerHTML = data[0].name
-//         ageElements[0].innerHTML = data[0].age
-//         nationalityElements[0].innerHTML = data[0].nationality
-        
-//         nameElements[1].innerHTML = data[1].name
-//         ageElements[1].innerHTML = data[1].age
-//         nationalityElements[1].innerHTML = data[1].nationality
-        
-//         nameElements[2].innerHTML = data[2].name
-//         ageElements[2].innerHTML = data[2].age
-//         nationalityElements[2].innerHTML = data[2].nationality
+//         peoples.forEach((i) => {
+//             const card = document.createElement('div');
+//             card.innerHTML = `
+//             <div class='card'>
+//                 <h3>Cards</h3>
+//                 <h2>Name: ${i.name}</h2>
+//                 <p>age: ${i.age}</p>
+//                 <span>nationality: ${i.nationality}</span>
+//             </div>`;
+//             cardBox.append(card);
+//         });
+    
+//         console.log(peoples);
+//     } catch (error) {
+//         console.error('Ошибка при выполнении запроса:', error);
 //     }
 // }
 
+// Home Work- 4.2
 
-// Home Work-2
-const btn = document.querySelector('.btn')
-btn.onclick = () => {
-    const request = new XMLHttpRequest() 
-    request.open("GET", "homework.json")  
-    request.setRequestHeader("Content-type", "application/json") 
-    request.send() 
 
-    request.onload = () => {
-        const data = JSON.parse(request.response)
-        console.log(data)
-    }
-}
+// const btn = document.querySelector('.btn');
 
+// const fetchData = async (url) => {
+//     try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         return data;
+//     } catch (error) {
+//         console.error('Ошибка при выполнении GET-запроса:', error);
+//         return null;
+//     }
+// };
+
+// btn.onclick = async () => {
+//     try {
+//         const data = await fetchData('homework.json');
+//         console.log(data);
+//     } catch (error) {
+//         console.error('Ошибка при получении данных:', error);
+//     }
+// };
